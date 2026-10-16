@@ -47,3 +47,57 @@ svg { width: 1em; height: 1em; stroke-width: 1.8; }
 @media (max-width:1280px){.analytics-grid{grid-template-columns:2fr 1fr 1fr}.analytics-grid .panel:last-child{grid-column:3}.workspace-grid{grid-template-columns:1fr}.bottom-grid{grid-template-columns:1fr 1fr}.bottom-grid .panel:last-child{grid-column:1/-1}.quote{display:none}}
 @media (max-width:900px){.sidebar{transform:translateX(-102%);width:248px;box-shadow:20px 0 60px oklch(.05 .04 260 / .8)}.sidebar-mobile-open{transform:translateX(0)}.sidebar-collapsed{width:248px}.sidebar-collapsed .brand-copy,.sidebar-collapsed .nav-label,.sidebar-collapsed .nav-badge,.sidebar-collapsed .live-badge{display:flex}.sidebar-collapsed .nav-item{grid-template-columns:24px minmax(0,1fr) auto;place-items:initial;padding:0 10px}.sidebar-collapsed .collapse-button{position:static}.sidebar-overlay{position:fixed;inset:0;z-index:35;border:0;background:oklch(.04 .03 260 / .72);backdrop-filter:blur(4px)}.main,.main-expanded{margin-left:0}.mobile-menu{display:inline-flex!important}.topbar{grid-template-columns:auto minmax(0,1fr) auto}.stats-grid{grid-template-columns:1fr 1fr}.analytics-grid{grid-template-columns:1fr 1fr}.analytics-grid .panel:last-child{grid-column:auto}.user-copy{display:none}}
 @media (max-width:620px){.topbar{height:58px;padding:8px}.top-actions>.notification,.top-actions>svg,kbd{display:none}.dashboard-content{padding:7px}.welcome-banner{min-height:132px}.welcome-copy{padding:16px}.welcome-copy h1{font-size:20px}.welcome-copy p{max-width:85%;font-size:9px}.welcome-banner>img{object-position:62% center}.stats-grid,.analytics-grid,.bottom-grid{grid-template-columns:1fr}.analytics-grid .panel:last-child,.bottom-grid .panel:last-child{grid-column:auto}.stat-card{min-height:88px}.table-tools select,.view-toggle{display:none}.table-search{width:145px}.workspace-grid{display:block}.workspace-grid>.panel+ .panel{margin-top:7px}.panel-head{align-items:start}.projects-panel .panel-head{grid-template-columns:1fr}.table-tools{grid-row:2}.legend{display:none}.success-panel{grid-template-columns:120px 1fr}.command-search input::placeholder{font-size:9px}.schedule-list>div{grid-template-columns:35px 23px minmax(0,1fr) auto}.schedule-list small{display:none}}
+
+.nav-item{text-decoration:none}
+.nav-item-disabled{cursor:default}
+.nav-item-disabled:hover{background:transparent;color:var(--muted-foreground)}
+.section-page-heading{display:flex;min-height:98px;align-items:center;gap:14px;border:1px solid var(--border);border-radius:8px;padding:16px;background:linear-gradient(110deg,oklch(.16 .07 260 / .95),oklch(.12 .05 263 / .9))}
+.section-page-icon{display:grid;width:48px;height:48px;flex:0 0 auto;place-items:center;border:1px solid var(--cyan);border-radius:12px;background:oklch(.22 .08 260 / .8);color:var(--cyan);font-size:22px;box-shadow:0 0 18px oklch(.78 .16 200 / .18)}
+.section-page-heading .eyebrow{margin-bottom:4px}
+.section-page-heading h1{margin:0;font:700 22px/1.2 var(--font-display)}
+.section-page-heading p{margin:4px 0 0;color:var(--muted-foreground);font-size:11px}
+.panel-count{margin-left:7px;border:1px solid var(--border);border-radius:5px;padding:3px 6px;color:var(--muted-foreground);font:500 9px var(--font-sans);vertical-align:middle}
+.projects-page-panel .panel-head,.schedules-page-panel .panel-head{min-height:52px}
+.project-card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:10px;padding:10px 12px 12px}
+.project-card{min-width:0;border:1px solid color-mix(in oklab,currentColor 44%,var(--border));border-radius:8px;padding:12px;background:linear-gradient(145deg,color-mix(in oklab,currentColor 7%,var(--card)),var(--card) 58%);transition:border-color .2s ease,box-shadow .2s ease}
+.project-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.project-card h3{margin:11px 0 3px;color:var(--foreground);font:650 13px var(--font-display)}
+.project-card>p{min-height:28px;margin:0 0 10px;color:var(--muted-foreground);font-size:9px;line-height:1.5}
+.project-card-metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:13px;border-top:1px solid var(--border);padding-top:10px}
+.project-card-metrics>div,.project-card-success>div:first-child{display:flex;min-width:0;flex-direction:column;gap:4px}
+.project-card-metrics span,.project-card-success span{color:var(--muted-foreground);font-size:8px}
+.project-card-metrics strong,.project-card-success strong{overflow:hidden;color:var(--foreground);font-size:9px;text-overflow:ellipsis;white-space:nowrap}
+.project-card-success{margin-top:10px}
+.project-card-success>div:first-child{flex-direction:row;align-items:center;justify-content:space-between}
+.project-card .progress{width:100%}
+.schedule-page-list{padding:0 12px 10px}
+.schedule-page-row{display:grid;grid-template-columns:48px 25px minmax(0,1fr) minmax(80px,.45fr) auto 32px;align-items:center;gap:10px;border-top:1px solid var(--border);padding:10px 0}
+.schedule-page-row>time{color:var(--foreground);font:600 11px var(--font-display)}
+.schedule-page-project{display:flex;min-width:0;flex-direction:column;gap:3px}
+.schedule-page-project strong{overflow:hidden;font-size:9px;text-overflow:ellipsis;white-space:nowrap}
+.schedule-page-project span,.schedule-page-recurrence{overflow:hidden;color:var(--muted-foreground);font-size:8px;text-overflow:ellipsis;white-space:nowrap}
+.toggle.off{background:var(--muted)}
+@media (hover:hover){
+  .project-card:hover{border-color:currentColor;box-shadow:0 0 0 1px color-mix(in oklab,currentColor 28%,transparent),0 8px 20px -14px color-mix(in oklab,currentColor 68%,transparent)}
+}
+@media (max-width:900px){.project-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.section-page-heading{min-height:84px;padding:12px}.section-page-icon{width:40px;height:40px;font-size:19px}.section-page-heading h1{font-size:19px}.section-page-heading p{font-size:9px}.projects-page-panel .panel-head,.schedules-page-panel .panel-head{grid-template-columns:1fr}.projects-page-panel .table-tools,.schedules-page-panel .table-tools{grid-row:2}.projects-page-panel .table-tools select,.schedules-page-panel .table-tools select{display:block}.project-card-grid{grid-template-columns:1fr}.schedule-page-list{padding:0 10px}.schedule-page-row{grid-template-columns:38px 23px minmax(0,1fr) 30px;gap:7px}.schedule-page-recurrence,.schedule-page-row .status-pill{display:none}.schedule-page-project span{font-size:7px}}
+@media (max-width:620px){.projects-page-panel .table-tools .view-toggle{display:flex}}
+.projects-page-panel .view-toggle{gap:4px;border:0;overflow:visible}
+.projects-page-panel .view-toggle button{border-radius:5px}
+
+.stat-card{isolation:isolate}
+.stat-card::before{content:"";position:absolute;inset:1px;z-index:1;border-radius:inherit;background:radial-gradient(circle 240px at var(--spotlight-x,50%) var(--spotlight-y,50%),color-mix(in oklab,currentColor 82%,transparent) 0%,color-mix(in oklab,currentColor 36%,transparent) 48%,transparent 100%);opacity:0;pointer-events:none;transition:opacity .16s ease}
+.stat-card:hover::before{opacity:.18}
+.stat-card .stat-icon,.stat-card .spark-bars{position:relative;z-index:2}
+.stat-card:hover{transform:none}
+.stat-card:hover .stat-icon{transform:none}
+.panel,.ai-card,.control-status,.insight-strip,.scale-strip{transition:border-color .2s ease,box-shadow .2s ease,background-color .2s ease}
+.panel:hover{border-color:oklch(.68 .16 245 / .62);box-shadow:0 0 0 1px oklch(.68 .16 245 / .16),0 8px 20px -15px oklch(.68 .16 245 / .7),inset 0 1px oklch(.8 .12 235 / .12)}
+.ai-card:hover{border-color:oklch(.7 .2 290 / .84);box-shadow:0 0 18px -9px oklch(.7 .2 290 / .7)}
+.control-status:hover{border-color:oklch(.78 .16 200 / .76);box-shadow:0 0 16px -9px oklch(.78 .16 200 / .72)}
+.insight-strip:hover,.scale-strip:hover{border-color:oklch(.7 .19 285 / .78);box-shadow:0 0 16px -9px oklch(.7 .19 285 / .58)}
+@media (hover:hover){
+  .execution-list>div,.schedule-list>div,.activity-list>div,.health-list>div,.project-status>div,.rate-list>div,tbody tr{transition:background-color .18s ease}
+  .execution-list>div:hover,.schedule-list>div:hover,.activity-list>div:hover,.health-list>div:hover,.project-status>div:hover,.rate-list>div:hover,tbody tr:hover{background:oklch(.24 .065 258 / .38)}
+}
